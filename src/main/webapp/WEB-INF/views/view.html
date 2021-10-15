@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>View student</h3>
+<p>
+  <a th:href="@{/student}">
+    Back to student list
+  </a>
+</p>
+<div id="form">
+  <div class="cusdetail">
+    <label>Name:</label>
+    <label th:text="${student.id}"></label>
+  </div>
+  <div class="cusdetail">
+    <label>Name:</label>
+    <label th:text="${student.name}"></label>
+  </div>
+  <div class="cusdetail">
+    <label>Email:</label>
+    <label th:text="${student.email}"></label>
+  </div>
+  <div class="cusdetail">
+    <label>Address:</label>
+    <label th:text="${student.address}"></label>
+  </div>
+  <div class="cusdetail">
+    <label>Image:</label>
+    <label><img width="100" height="100" th:src="@{'/image/' + ${student.image}}" ></label>
+  </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
